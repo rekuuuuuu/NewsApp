@@ -25,7 +25,7 @@ export const HomeScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList data={articles} renderItem={({ item }) => <ListItem imageUrl={item.urlToImage} title={item.title} author={item.author} onPress={() => navigation.navigate("Article")}></ListItem>} keyExtractor={(item, index) => index.toString()}></FlatList>
+      <FlatList data={articles} renderItem={({ item }) => <ListItem imageUrl={item.urlToImage} title={item.title} author={item.author} onPress={() => navigation.navigate("Article", { article: item })}></ListItem>} keyExtractor={(item, index) => index.toString()}></FlatList>
     </SafeAreaView>
   );
 };
